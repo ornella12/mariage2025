@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Notre mariage 💍</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mariage — Thème Celtique</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Bienvenue sur notre site de mariage 💕</h1>
-  <p>Ce site sera bientôt en ligne !</p>
+  <header class="nav">
+    <div class="container">
+      <a href="#hero" class="brand"><span class="brand-mark">CM</span> Clara & Maxime</a>
+      <nav>
+        <a href="#programme">Programme</a>
+        <a href="#lieux">Lieux</a>
+        <a href="#rsvp" class="btn btn-primary">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <h1>Clara & Maxime</h1>
+      <div class="knot-divider"></div>
+      <p class="subtitle">24 juillet 2025 — Querétaro, Mexique</p>
+      <div id="countdown" aria-label="Compte à rebours"></div>
+      <a href="#rsvp" class="btn btn-accent">Je confirme ma présence</a>
+    </div>
+  </section>
+
+  <section id="programme" class="section">
+    <div class="container">
+      <h2>Programme</h2>
+      <ul class="timeline">
+        <li><time>16:00</time><div><h3>Cérémonie</h3><p>Jardin del Sol</p></div></li>
+        <li><time>19:00</time><div><h3>Dîner & Soirée</h3><p>Hacienda Las Palmas</p></div></li>
+        <li><time>11:00 (J+1)</time><div><h3>Brunch</h3><p>Café de la Plaza</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section alt">
+    <div class="container">
+      <h2>Confirmez votre présence</h2>
+      <!-- TODO: remplace l’action par ton URL Formspree quand tu l’auras -->
+      <form id="rsvp-form" action="#" method="POST">
+        <label>Nom*
+          <input type="text" name="nom" required placeholder="Votre nom" />
+        </label>
+        <label>Nombre de personnes*
+          <input type="number" name="invites" required min="1" value="1" />
+        </label>
+        <label>Message / Allergies
+          <textarea name="message" rows="3" placeholder="Un petit mot ?"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Je serai là 🎉</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
