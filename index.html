@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mariage — Thème Celtique</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
+
 <body>
+
+  <!-- === DEBUT : Barre de navigation === -->
   <header class="nav">
     <div class="container">
       <a href="#hero" class="brand"><span class="brand-mark">CM</span> Clara & Maxime</a>
@@ -17,36 +20,165 @@
       </nav>
     </div>
   </header>
+  <!-- === FIN : Barre de navigation === -->
 
+  <!-- === DEBUT : Section HÉRO === -->
   <section id="hero" class="hero">
     <div class="hero-inner">
       <h1>Clara & Maxime</h1>
       <div class="knot-divider"></div>
-      <p class="subtitle">24 juillet 2025 — Querétaro, Mexique</p>
+      <p class="subtitle">24 juillet 2025 — Manoir de la Noë Verte, Lanloup</p>
       <div id="countdown" aria-label="Compte à rebours"></div>
       <a href="#rsvp" class="btn btn-accent">Je confirme ma présence</a>
     </div>
   </section>
+  <!-- === FIN : Section HÉRO === -->
 
+  <!-- === DEBUT : Section PROGRAMME === -->
   <section id="programme" class="section">
     <div class="container">
       <h2>Programme</h2>
       <ul class="timeline">
-        <li><time>16:00</time><div><h3>Cérémonie</h3><p>Jardin del Sol</p></div></li>
-        <li><time>19:00</time><div><h3>Dîner & Soirée</h3><p>Hacienda Las Palmas</p></div></li>
-        <li><time>11:00 (J+1)</time><div><h3>Brunch</h3><p>Café de la Plaza</p></div></li>
+        <li><time>16:00</time><div><h3>Cérémonie</h3><p>Manoir de la Noë Verte</p></div></li>
+        <li><time>19:00</time><div><h3>Dîner & Soirée</h3><p>Salle de réception du Manoir</p></div></li>
+        <li><time>11:00 (J+1)</time><div><h3>Brunch</h3><p>Jardin du Manoir</p></div></li>
       </ul>
     </div>
   </section>
+  <!-- === FIN : Section PROGRAMME === -->
 
+  <!-- === DEBUT : Section LIEUX & HÉBERGEMENTS === -->
+  <section id="lieux" class="section alt">
+    <div class="container">
+      <h2>Lieux & Hébergements</h2>
+
+      <!-- Carte du lieu principal -->
+      <div class="card" style="margin-bottom:16px;">
+        <h3>Lieu principal</h3>
+        <p>Manoir de la Noë Verte, 22290 Lanloup</p>
+        <div class="map-embed">
+          <iframe
+            title="Manoir de la Noë Verte — Carte"
+            src="https://www.google.com/maps?q=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a class="btn" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">
+          Ouvrir dans Google Maps
+        </a>
+      </div>
+
+      <h3>Hébergements recommandés à proximité</h3>
+
+      <div class="cards lodging-grid">
+        <!-- Camping -->
+        <article class="card lodging">
+          <img src="images/hebergements/neptune.jpg" alt="Camping Sites & Paysages Le Neptune" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Camping Sites & Paysages Le Neptune ★★★★</h4>
+            <p class="lodging-meta">Kerguistin, 22580 Lanloup (~5 min à pied)</p>
+            <p class="lodging-note">Camping familial avec mobil-homes et chalets.</p>
+            <div class="chips"><span class="chip">Camping</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.leneptune.com/fr/">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gîte 20 pers -->
+        <article class="card lodging">
+          <img src="images/hebergements/plouha-20.jpg" alt="Maison de maître 20 personnes à Plouha" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Maison de maître — 20 personnes</h4>
+            <p class="lodging-meta">Rue du Bois du Chat, 22580 Plouha (~6 min en voiture)</p>
+            <p class="lodging-note">Grand jardin, à proximité des plages.</p>
+            <div class="chips"><span class="chip">Gîte</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.armor-vacances.com/locations-22-cotes-d-armor/cote-de-goelo/annonce-5171-maison-20-personnes-plouha-goupil.html">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Les Gîtes de Kerégal -->
+        <article class="card lodging">
+          <img src="images/hebergements/keregal.jpg" alt="Les Gîtes de Kerégal à Plouha" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Les Gîtes de Kerégal — jusqu’à 16 pers.</h4>
+            <p class="lodging-meta">41 Keregal, 22580 Plouha (~8 min en voiture)</p>
+            <p class="lodging-note">Charmante propriété bretonne idéale pour les familles.</p>
+            <div class="chips"><span class="chip">Gîtes</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.grandsgites.com/gite-22-keregal-7011.htm">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hébergement de groupe -->
+        <article class="card lodging">
+          <img src="images/hebergements/plouharmor.jpg" alt="Plouharmor - Le Pavillon (hébergement de groupe)" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Plouharmor — Le Pavillon (10 à 117 pers.)</h4>
+            <p class="lodging-meta">Plouha (~10 min en voiture)</p>
+            <p class="lodging-note">Hébergement de groupe modulable, proche de la mer et du GR34.</p>
+            <div class="chips"><span class="chip">Gîte de groupe</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.gitedegroupe.fr/gite-groupe-As-3a47.html">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ferme de Kerloury -->
+        <article class="card lodging">
+          <img src="images/hebergements/kerloury.jpg" alt="Ferme de Kerloury - Paimpol" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Ferme de Kerloury — 14 pers.</h4>
+            <p class="lodging-meta">Paimpol (~15 min en voiture)</p>
+            <p class="lodging-note">6 chambres, 13 lits — parfait pour familles ou groupes.</p>
+            <div class="chips"><span class="chip">Gîte</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.clevacances.com/fr/hebergement/39951-point">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Manoir de Kerhir -->
+        <article class="card lodging">
+          <img src="images/hebergements/kerhir.jpg" alt="Manoir de Kerhir - Trédarzec" class="lodging-photo">
+          <div class="lodging-body">
+            <h4 class="lodging-title">Manoir de Kerhir — 15 pers.</h4>
+            <p class="lodging-meta">Trédarzec (~25 min en voiture)</p>
+            <p class="lodging-note">Magnifique manoir breton, option plus haut de gamme.</p>
+            <div class="chips"><span class="chip">Manoir / Gîte</span></div>
+            <div class="lodging-actions">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.gitedegroupe.fr/gite-groupe-dy-e2d5.html">Voir / Itinéraire</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="hint" style="margin-top:10px;">
+        Astuce : partagez covoiturage ou taxis dans le groupe WhatsApp des invités 🚗
+      </p>
+    </div>
+  </section>
+  <!-- === FIN : Section LIEUX & HÉBERGEMENTS === -->
+
+  <!-- === DEBUT : Section RSVP === -->
   <section id="rsvp" class="section alt">
     <div class="container">
       <h2>Confirmez votre présence</h2>
-      <!-- TODO: remplace l’action par ton URL Formspree quand tu l’auras -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw20qC-S2d80VWqTMtNAb4rGLd0F_GGNHUWDqjGqPM_rxRSA/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <p>Merci de remplir le formulaire ci-dessous pour nous confirmer votre présence 💌</p>
+
+      <!-- ✳️✳️✳️ COPIE ICI LE CODE FOURNI PAR GOOGLE FORMS ✳️✳️✳️ -->
+      <strong><!-- Exemple de structure à remplacer par ton iframe Google Forms -->
+     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw20qC-S2d80VWqTMtNAb4rGLd0F_GGNHUWDqjGqPM_rxRSA/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      </strong>
+      <!-- ✳️✳️✳️ FIN DU BLOC GOOGLE FORMS ✳️✳️✳️ -->
     </div>
   </section>
+  <!-- === FIN : Section RSVP === -->
 
-  <script src="script.js"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
