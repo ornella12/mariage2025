@@ -1,190 +1,188 @@
-/* ============
-   Thème CELTIQUE — Mariage
-   Couleurs: bleus, verts, marrons, blanc
-   (tu peux ajuster facilement les variables ci-dessous)
-   ============ */
+/* === Thème Celtique / Elfique — Mariage Clara & Maxime === */
 
-/* Police d’écriture (romantique + lisible) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap');
-
-/* Palette du thème */
+/* — Palette & variables — */
 :root{
-  --celtic-blue: #1E3A5F;
-  --celtic-blue-2:#2a4f80;
-  --celtic-green:#2E6B4F;
-  --celtic-brown:#6B4F2E;
-  --ivory:#FFFEFA;       /* blanc chaud */
-  --ink:#22303A;         /* texte principal */
-  --muted:#6a7884;       /* texte secondaire */
-  --accent:#C7A468;      /* touche dorée (facultatif) */
-
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --green-1:#2E7D6E;     /* vert profond */
+  --green-2:#3C9A82;     /* vert médian */
+  --mint:#C8E3D4;        /* vert d’eau doux */
+  --beige:#F5F3EE;       /* beige clair */
+  --ink:#2B2B2B;         /* texte */
+  --muted:#5E5E5E;       /* texte secondaire */
+  --gold:#D1B27C;        /* doré doux */
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* Reset doux */
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; }
+/* — Reset & bases — */
+html,body{margin:0;padding:0;scroll-behavior:smooth;}
 body{
+  background:var(--beige);
+  color:var(--ink);
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background: var(--ivory);
-  line-height: 1.6;
+  line-height:1.65;
+  font-size:16px;
 }
 
-/* Titres en Cormorant pour l’esprit “celtique élégant” */
-h1,h2,h3 { font-family: "Cormorant Garamond", Georgia, serif; color: var(--celtic-blue); margin: 0 0 .5em; }
-h1 { font-size: clamp(2rem, 4vw, 3rem); }
-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
-h3 { font-size: clamp(1.2rem, 2.2vw, 1.4rem); }
+/* — Sections — */
+.section{padding:64px 0;}
+.section.alt{background:var(--mint);}
+.container{width:min(1080px,92%);margin:0 auto;}
 
-.container { width: min(1080px, 92%); margin: 0 auto; }
-.section { padding: 56px 0; }
-.section.alt { background: #fff; }
-
-/* Boutons */
-.btn{
-  display:inline-block; padding: 10px 16px; border-radius: 999px; border:1px solid var(--celtic-blue);
-  text-decoration:none; color: #fff; background: var(--celtic-blue); transition: transform .08s ease, opacity .2s;
+/* — Titres et typographies — */
+h1,h2,h3,h4{
+  font-family:"Cormorant Garamond", Georgia, serif;
+  color:var(--green-1);
+  letter-spacing:.3px;
+  margin:0 0 .6em;
 }
-.btn:hover{ transform: translateY(-1px); opacity:.95; }
-.btn-primary{ background: var(--celtic-green); border-color: var(--celtic-green); }
-.btn-accent{ background: var(--celtic-brown); border-color: var(--celtic-brown); }
+h1{
+  font-family:"Uncial Antiqua","Cormorant Garamond",serif;
+  font-weight:400;
+  letter-spacing:.5px;
+}
+h2 .elf{
+  font-family:"Uncial Antiqua",serif;
+  font-weight:400;
+  letter-spacing:.6px;
+}
+h3{font-size:1.2rem;margin-top:1em;color:var(--green-2);}
+p{margin:0 0 1em;}
 
-/* Barre de navigation */
+/* — Lettrine / effet manuscrit — */
+.dropcap::first-letter{
+  font-family:"Uncial Antiqua",serif;
+  font-size:2.6rem;
+  float:left;
+  line-height:.85;
+  padding:2px 8px 0 0;
+  color:var(--green-1);
+}
+
+/* — Navigation — */
 .nav{
-  position: sticky; top:0; z-index: 20; background: rgba(255,255,255,.9); backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.06);
 }
-.nav .brand{ text-decoration:none; color: var(--celtic-blue); font-weight: 700; padding: 12px 0; display:inline-flex; align-items:center; gap:10px; }
+header.nav .container{
+  display:flex;align-items:center;justify-content:space-between;
+}
 .brand-mark{
-  display:inline-grid; place-items:center; width:36px; height:36px; border-radius:999px; background: var(--celtic-green); color:#fff; font-weight:700;
+  display:inline-grid;place-items:center;
+  width:36px;height:36px;
+  border-radius:999px;
+  background:var(--green-2);color:#fff;font-weight:700;
 }
-.nav nav{ display:flex; gap:16px; align-items:center; justify-content:flex-end; padding: 10px 0; }
-.nav nav a{ color: var(--ink); text-decoration:none; padding:8px 10px; border-radius: 10px; }
-.nav nav a:hover{ background: rgba(0,0,0,.04); }
-header.nav .container{ display:flex; align-items:center; justify-content:space-between; }
+.topmenu{display:flex;gap:16px;flex-wrap:wrap;}
+.topmenu a{text-decoration:none;color:var(--green-1);font-weight:600;}
+.topmenu a:hover{color:var(--green-2);}
+@media (max-width:680px){
+  .topmenu{gap:10px;}
+  .topmenu a{padding:6px 8px;font-size:.95rem;}
+  header.nav .container{row-gap:8px;}
+}
 
-/* Section HÉRO — image de fond (à placer dans images/hero.jpg) */
+/* — Hero (photo de couverture sans filtre) — */
 .hero{
-  position:relative; min-height: 64vh; display:grid; place-items:center; text-align:center; color:#fff;
-  background: linear-gradient(180deg, rgba(30,58,95,.55), rgba(46,107,79,.55)),
-              url('images/hero.jpg') center/cover no-repeat fixed;
+  position:relative;
+  min-height:64vh;
+  display:grid;place-items:center;
+  text-align:center;color:#fff;
+  background:url('images/hero.jpg') center/cover no-repeat;
 }
-.hero-inner{ padding: 64px 16px; }
-.subtitle{ opacity:.95; margin-bottom: 16px; }
+.hero-inner{padding:64px 16px;text-shadow:0 2px 16px rgba(0,0,0,.35);}
+.subtitle{opacity:.97;margin-bottom:16px;}
 
-/* Diviseur nœud celtique (SVG en background) */
-.knot-divider{
-  width: 100%; height: 26px; margin: 18px 0 8px;
-  background:
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="26" viewBox="0 0 240 26"><path d="M10 13c20-20 40 20 60 0s40 20 60 0 40 20 60 0 40 20 60 0" fill="none" stroke="%23C7A468" stroke-width="2" stroke-linecap="round"/></svg>')
-    center/auto 20px repeat-x;
-  opacity:.9;
+/* — Séparateur Feuille de Lórien — */
+.lorien-divider{
+  width:100%;height:28px;margin:18px auto 8px;opacity:.95;
+  background:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='320' height='28' viewBox='0 0 320 28'>\
+<defs><style>\
+.leaf{fill:%23C8E3D4;stroke:%232E7D6E;stroke-width:1.2}\
+.vine{fill:none;stroke:%23D1B27C;stroke-width:1.5;stroke-linecap:round}\
+</style></defs>\
+<path class='vine' d='M5 14 C 45 2, 85 26, 125 14 S 205 2, 245 14 S 285 26, 315 14'/>\
+<path class='leaf' d='M152 6c6 3 6 13 0 16c-6-3-6-13 0-16z'/>\
+<path class='leaf' d='M168 6c6 3 6 13 0 16c-6-3-6-13 0-16z'/>\
+</svg>") center/auto 24px repeat-x;
 }
 
-/* Timeline (Programme) */
-.timeline{ list-style:none; padding:0; margin: 20px 0 0; display:grid; gap:12px; }
+/* — Boutons — */
+.btn{
+  display:inline-block;padding:10px 16px;
+  border-radius:999px;border:1px solid var(--green-1);
+  text-decoration:none;color:#fff;
+  background:var(--green-1);
+  transition:transform .08s ease,opacity .2s;
+}
+.btn:hover{transform:translateY(-1px);opacity:.95;}
+.btn-primary{background:var(--green-2);border-color:var(--green-2);}
+.btn-accent{background:var(--gold);border-color:var(--gold);color:#2e2e2e;}
+
+/* — Timeline Programme — */
+.timeline{list-style:none;padding:0;margin:0;}
 .timeline li{
-  display:grid; grid-template-columns: 90px 1fr; gap:16px; align-items:start; background:#fff; border:1px solid #eee; border-radius: var(--radius); padding:12px 16px; box-shadow: var(--shadow);
+  margin:12px 0;padding:12px;border-left:3px solid var(--green-2);
+  background:#fff;border-radius:0 8px 8px 0;box-shadow:var(--shadow);
 }
-.timeline time{ color: var(--celtic-green); font-weight: 700; }
+.timeline time{font-weight:700;color:var(--green-1);display:block;margin-bottom:4px;}
 
-/* Cartes (Lieux, Hébergement, etc.) */
-.cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:16px; margin-top:16px; }
-.card{
-  background:#fff; border:1px solid #eee; border-radius: var(--radius); padding:14px; box-shadow: var(--shadow);
+/* — Lieux & Hébergements — */
+.lodging-grid{align-items:stretch;}
+.lodging{display:grid;grid-template-columns:120px 1fr;gap:12px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:10px;}
+@media (max-width:640px){.lodging{grid-template-columns:1fr;}}
+.lodging-photo{width:100%;height:120px;object-fit:cover;border-radius:10px;background:#f4f4f4;}
+.lodging-title{margin:0 0 4px;font-family:"Cormorant Garamond",Georgia,serif;color:var(--green-1);}
+.lodging-meta{margin:0;color:var(--muted);font-size:.95rem;}
+.lodging-note{margin:6px 0 0;color:var(--ink);font-size:.95rem;}
+.lodging-actions{margin-top:8px;}
+.chip{display:inline-block;background:var(--mint);color:var(--green-1);border-radius:8px;padding:2px 8px;font-size:.8rem;margin-right:4px;}
+
+/* — FAQ & Infos pratiques — */
+.faq-item{
+  background:rgba(255,255,255,0.7);
+  border:1px solid #d6d3d1;
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+  transition:all 0.3s ease;
 }
-.map-embed iframe{ width:100%; height:240px; border:0; border-radius: 12px; }
-
-/* RSVP form */
-form{ display:grid; gap:10px; max-width: 520px; margin: 0 auto; }
-input, textarea, select{
-  padding:12px; border-radius: 12px; border:1px solid #e6e6e6; background:#fff;
+.faq-item summary{
+  cursor:pointer;
+  padding:14px 18px;
+  font-weight:600;
+  color:var(--green-1);
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.1rem;
 }
-label{ text-align:left; color: var(--muted); font-size:.95rem; }
-
-/* Compte à rebours */
-#countdown{
-  margin: 10px auto 14px; font-weight: 700; letter-spacing:.5px;
-  background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); padding: 8px 14px; border-radius: 999px;
+.faq-item[open] summary{
+  background-color:var(--green-1);
+  color:white;
 }
+.faq-content{
+  padding:12px 20px 20px;
+  font-size:1rem;
+  line-height:1.6;
+  color:var(--ink);
+}
+.faq-content p{margin-bottom:8px;}
+.faq-content a.btn{margin-top:8px;display:inline-block;}
 
-<!-- === DEBUT : Section FAQ / Infos pratiques === -->
-<section id="faq" class="section">
-  <div class="container">
-    <h2>FAQ & Infos pratiques</h2>
-    <p class="hint">Quelques informations utiles pour profiter sereinement de ce week-end 🌿</p>
-
-    <div class="faq">
-      <details class="faq-item" open>
-        <summary>Accès & stationnement</summary>
-        <div class="faq-content">
-          <p><strong>Adresse :</strong> Manoir de la Noë Verte, 22290 Lanloup</p>
-          <p>Un grand parking est disponible sur place, à proximité immédiate du manoir.</p>
-          <p>Si vous laissez votre voiture sur place, un binôme de chauffeurs assurera le retour des véhicules et des invités le soir, gratuitement.  
-          Le système fonctionne par roulement afin que chacun puisse profiter sans se soucier du retour 🍸🚗</p>
-          <p><a class="btn" target="_blank" rel="noopener"
-              href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">Itinéraire Google Maps</a></p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Animaux</summary>
-        <div class="faq-content">
-          <p>Les animaux ne seront malheureusement pas autorisés sur le site du mariage 🐾.</p>
-          <p>Merci de prévoir une garde pour vos compagnons à quatre pattes avant votre venue.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Enfants</summary>
-        <div class="faq-content">
-          <p>Nous aimons beaucoup vos enfants 💛, mais nous avons choisi de faire de cette journée une soirée “adulte uniquement”.</p>
-          <p>Il ne sera pas possible de faire garder les enfants sur place.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Retour & sécurité</summary>
-        <div class="faq-content">
-          <p>Un <strong>service de chauffeurs bénévoles</strong> sera disponible gratuitement pour ramener les voitures et les invités ayant consommé de l’alcool.</p>
-          <p>Le fonctionnement se fait par roulement : les conducteurs désignés en première partie de soirée seront ensuite relayés pour que tout le monde puisse participer à la fête 🕺.</p>
-          <p>Merci de privilégier cette solution plutôt que de reprendre le volant 🚫.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Plage & baignade</summary>
-        <div class="faq-content">
-          <p>La <strong>plage du Palus</strong> se trouve à environ 10 minutes du manoir 🌊.</p>
-          <p>Il sera possible de s’y baigner ou de profiter d’une balade le lendemain du mariage.</p>
-          <p>Pensez à apporter vos maillots, serviettes et sandales !</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Tenue</summary>
-        <div class="faq-content">
-          <p>Tenue chic et confortable, avec une <strong>touche celtique</strong> ou un rappel de vert, bleu ou blanc si vous le souhaitez 🍀.</p>
-          <p>Le terrain est en partie naturel : talons aiguilles déconseillés. Une veste légère peut être utile pour la soirée.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-<!-- === FIN : Section FAQ / Infos pratiques === -->
-
-
-/* Galerie (si tu ajoutes des images plus tard) */
-.gallery{ display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:10px; }
-
-/* Menu du haut : amélioration responsive */
-.topmenu { display:flex; gap:16px; flex-wrap: wrap; }
-@media (max-width: 680px){
-  .topmenu { gap:10px; }
-  .topmenu a { padding:6px 8px; font-size:.95rem; }
-  header.nav .container { row-gap: 8px; }
+/* — Listes à puces feuille — */
+.leaf-list{list-style:none;padding-left:0;margin-left:0;}
+.leaf-list li{padding-left:28px;position:relative;margin:6px 0;}
+.leaf-list li::before{
+  content:"";position:absolute;left:0;top:.2em;width:18px;height:18px;
+  background:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<path fill='%232E7D6E' d='M12 2c4 2 6 6 6 10s-2 8-6 10c-4-2-6-6-6-10S8 4 12 2z'/>\
+</svg>") center/contain no-repeat;
+  opacity:.95;
 }
 
-.gallery img{ width:100%; border-radius: 12px; display:block; }
+/* — Divers — */
+.hint{font-size:.9rem;color:var(--muted);}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:16px;}
+.cards{display:grid;gap:16px;}
