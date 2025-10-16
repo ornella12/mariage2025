@@ -359,3 +359,52 @@ header.nav .container{
   }
 }
 
+/* === NAV responsive (hamburger sans JS) === */
+
+/* base existante, on complète */
+header.nav .container{ display:flex; align-items:center; justify-content:space-between; position:relative; }
+
+/* panneau de liens (desktop par défaut) */
+.menu { position: relative; }
+.menu-panel{
+  display:flex; gap:16px; align-items:center;
+}
+.menu-panel a{ text-decoration:none; color:var(--green-1); font-weight:600; }
+.menu-panel a:hover{ color:var(--green-2); }
+
+/* icône hamburger (caché sur desktop) */
+.hamburger{ display:none; list-style:none; cursor:pointer; user-select:none; }
+.hamburger::-webkit-details-marker{ display:none; } /* masque le triangle par défaut */
+.hamburger{
+  width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid var(--green-1); border-radius:10px; background: #fff;
+}
+.hamburger span{
+  display:block; width:22px; height:2px; background:var(--green-1); margin:3px 0; transition:transform .2s ease;
+}
+
+/* état ouvert : croix animée légère */
+.menu[open] .hamburger span:nth-child(1){ transform: translateY(5px) rotate(45deg); }
+.menu[open] .hamburger span:nth-child(2){ opacity:0; }
+.menu[open] .hamburger span:nth-child(3){ transform: translateY(-5px) rotate(-45deg); }
+
+/* --- Mobile --- */
+@media (max-width: 820px){
+  /* on montre l’icône hamburger et on transforme le panneau en dropdown */
+  .hamburger{ display:inline-flex; }
+  .menu-panel{
+    position:absolute; top:100%; right:0; left:0;
+    display:none; flex-direction:column; gap:8px;
+    background:rgba(255,255,255,.96); backdrop-filter: blur(8px);
+    border-bottom:1px solid rgba(0,0,0,.06);
+    padding:12px 16px;
+  }
+  .menu[open] .menu-panel{ display:flex; }
+
+  /* liens + bouton en version bloc */
+  .menu-panel a{ padding:10px 8px; }
+  .menu-panel .btn{ align-self:stretch; text-align:center; }
+}
+
+/* petit confort : ferme le menu quand on clique un lien (comportement natif de <details>) */
+
