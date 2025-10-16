@@ -94,6 +94,67 @@ header.nav .container{
 .hero-inner{padding:64px 16px;text-shadow:0 2px 16px rgba(0,0,0,.35);}
 .subtitle{opacity:.97;margin-bottom:16px;}
 
+/* HERO version “split” (portrait photo + texte à côté) */
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: var(--beige);
+  color: var(--ink);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(1100px, 92%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--beige);
+}
+
+.hero-photo {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  min-height: 80vh;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-family: "Uncial Antiqua", serif;
+  font-size: 3rem;
+  color: var(--green-1);
+  margin-bottom: 12px;
+}
+
+.hero-text .subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo {
+    min-height: 60vh;
+  }
+  .hero-text {
+    text-align: center;
+    padding: 32px 20px;
+  }
+}
+
+
 /* — Séparateur Feuille de Lórien — */
 .lorien-divider{
   width:100%;height:28px;margin:18px auto 8px;opacity:.95;
