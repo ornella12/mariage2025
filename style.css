@@ -270,3 +270,61 @@ header.nav .container{
 .hint{font-size:.9rem;color:var(--muted);}
 .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:16px;}
 .cards{display:grid;gap:16px;}
+
+/* --- Programme avec image --- */
+.programme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 48px;
+}
+
+.programme-text h2 {
+  margin-bottom: 24px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  border-left: 3px solid var(--green-1);
+  margin: 0;
+}
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+.timeline time {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: var(--green-1);
+  display: block;
+}
+.timeline h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  color: var(--ink);
+}
+.timeline p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.programme-photo img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .programme-grid {
+    grid-template-columns: 1fr;
+  }
+  .programme-photo {
+    margin-top: 24px;
+  }
+}
+
