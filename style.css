@@ -408,3 +408,45 @@ header.nav .container{ display:flex; align-items:center; justify-content:space-b
 
 /* petit confort : ferme le menu quand on clique un lien (comportement natif de <details>) */
 
+/* === Patch HERO mobile: anti-coupe & anti-débordement === */
+html, body { overflow-x: hidden; } /* évite toute barre horizontale */
+
+.hero-split { min-height: 85vh; }
+.hero-grid { width: min(100%, 92%); }
+
+/* Photo : reste pleine largeur en mobile, sans débordement visuel */
+.hero-photo {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  min-height: 70vh;
+}
+
+/* Texte : marges “safe area” iOS + tailles fluides */
+.hero-text {
+  padding: 40px max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left));
+  text-align: center;              /* meilleur centrage sur mobile */
+}
+
+/* Garde "Clara & Maxime" sur une seule ligne mais adapte la taille
+   pour ÉVITER la coupe à droite sur petits écrans */
+.hero-text h1 {
+  white-space: nowrap;
+  font-size: clamp(1.8rem, 8.2vw, 3rem);   /* ← s’adapte à la largeur */
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+}
+
+/* Adresse/lieu : taille fluide + espace de respiration */
+.hero-text .subtitle {
+  font-size: clamp(1rem, 4.5vw, 1.3rem);
+  line-height: 1.45;
+  margin: 16px 0 28px;
+  overflow-wrap: anywhere;          /* évite les débordements rares */
+}
+
+/* Bouton centré en mobile */
+.hero-text .btn { align-self: center; }
+
+/* Grille 1 colonne en mobile */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
