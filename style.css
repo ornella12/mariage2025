@@ -271,12 +271,15 @@ header.nav .container{
 .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:16px;}
 .cards{display:grid;gap:16px;}
 
-/* --- Programme avec image --- */
+/* --- Programme avec image (centré verticalement) --- */
 .programme-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  align-items: center;         /* ✅ centre verticalement texte et image */
+  justify-content: center;     /* ✅ centre la grille dans la page */
   gap: 48px;
+  max-width: 1100px;           /* ✅ limite la largeur totale pour éviter un effet “trop étiré” */
+  margin: 0 auto;              /* ✅ centre horizontalement le tout */
 }
 
 .programme-text h2 {
