@@ -14,30 +14,29 @@
 
 <body>
 
- <!-- === DEBUT : Barre de navigation (responsive hamburger CSS-only) === -->
-<header class="nav">
-  <div class="container">
-    <a href="#hero" class="brand">
+<!-- === NAVIGATION responsive (version élégante) === -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
       <span class="brand-mark">OA</span> Ornella & Adrien
     </a>
 
-    <!-- Menu responsive -->
-    <details class="menu" role="navigation">
-      <summary class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </summary>
+    <!-- interrupteur burger -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+      <span></span>
+    </label>
 
-      <nav class="menu-panel">
-        <a href="#programme">Programme</a>
-        <a href="#lieux">Lieux</a>
-        <a href="#rsvp" class="btn btn-primary">RSVP</a>
-        <a href="#liste">Liste</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-    </details>
+    <nav class="nav-links">
+      <a href="programme.html">Programme</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="rsvp.html" class="btn btn-primary">RSVP</a>
+      <a href="liste.html">Liste</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
   </div>
 </header>
-<!-- === FIN : Barre de navigation (responsive) === -->
+
 
 <!-- === DEBUT : Section HÉRO (version portrait + texte à côté) === -->
 <section id="hero" class="hero-split">
