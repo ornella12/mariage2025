@@ -499,4 +499,73 @@ html, body { overflow-x: hidden; } /* évite toute barre horizontale */
 .nav-links a:hover { color: var(--green-2); }
 
 /* --- Burger invisible par défaut --- */
-.nav-toggle { d
+.nav-toggle { display: none; }
+
+/* --- Icône burger --- */
+.nav-toggle-label {
+  display: none;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+  border: 1px solid var(--green-1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--green-1);
+  border-radius: 1px;
+  transition: all .3s ease;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  position: relative;
+}
+.nav-toggle-label span::before { top: -6px; }
+.nav-toggle-label span::after { top: 4px; }
+
+/* --- Animation croix --- */
+.nav-toggle:checked + .nav-toggle-label span {
+  background: transparent;
+}
+.nav-toggle:checked + .nav-toggle-label span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav-toggle:checked + .nav-toggle-label span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* --- Mobile layout --- */
+@media (max-width: 850px) {
+  .nav-links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .25s ease;
+  }
+
+  .nav-toggle-label { display: flex; }
+
+  /* ouvre le menu */
+  .nav-toggle:checked ~ .nav-links {
+    transform: scaleY(1);
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
