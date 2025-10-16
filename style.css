@@ -94,14 +94,15 @@ header.nav .container{
 .hero-inner{padding:64px 16px;text-shadow:0 2px 16px rgba(0,0,0,.35);}
 .subtitle{opacity:.97;margin-bottom:16px;}
 
-/* HERO version “split” (portrait photo + texte à côté) */
+/* === HERO “split” responsive === */
 .hero-split {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
   background: var(--beige);
   color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 0;
 }
 
 .hero-grid {
@@ -114,16 +115,18 @@ header.nav .container{
   background: var(--beige);
 }
 
+/* photo */
 .hero-photo {
   background: url('images/hero.jpg') center/cover no-repeat;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
+/* texte */
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px;
+  padding: 64px;
   text-align: left;
 }
 
@@ -131,26 +134,43 @@ header.nav .container{
   font-family: "Uncial Antiqua", serif;
   font-size: 3rem;
   color: var(--green-1);
-  margin-bottom: 12px;
+  white-space: nowrap; /* empêche “Clara & Maxime” de se couper */
 }
 
 .hero-text .subtitle {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--muted);
-  margin-bottom: 24px;
+  margin: 20px 0 32px;
 }
 
-@media (max-width: 800px) {
+/* bouton */
+.hero-text .btn {
+  align-self: flex-start;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
   }
+
   .hero-photo {
     min-height: 60vh;
   }
+
   .hero-text {
+    padding: 40px 20px;
     text-align: center;
-    padding: 32px 20px;
+  }
+
+  .hero-text .btn {
+    align-self: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.03em;
   }
 }
 
