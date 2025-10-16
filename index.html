@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mariage — Thème Celtique</title>
+  <title>Mariage — Thème Celtique & Nature</title>
+  <meta name="description" content="Clara & Maxime — Mariage au Manoir de la Noë Verte (Lanloup). Programme, lieux, hébergements, RSVP, infos pratiques." />
+  <!-- Polices (elfique + élégante + lisible) -->
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css?v=6" />
 </head>
 
 <body>
 
-<!-- === DEBUT : Barre de navigation === -->
-<header class="nav">
-  <div class="container">
-    <a href="#hero" class="brand">
-      <span class="brand-mark">CM</span> Clara & Maxime
-    </a>
-    <nav class="topmenu">
-      <a href="#programme">Programme</a>
-      <a href="#lieux">Lieux</a>
-      <a href="#rsvp" class="btn btn-primary">RSVP</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </div>
-</header>
-<!-- === FIN : Barre de navigation === -->
+  <!-- === DEBUT : Barre de navigation === -->
+  <header class="nav">
+    <div class="container">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">CM</span> Clara & Maxime
+      </a>
+      <nav class="topmenu">
+        <a href="#programme">Programme</a>
+        <a href="#lieux">Lieux</a>
+        <a href="#rsvp" class="btn btn-primary">RSVP</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+  <!-- === FIN : Barre de navigation === -->
 
   <!-- === DEBUT : Section HÉRO === -->
   <section id="hero" class="hero">
     <div class="hero-inner">
       <h1>Clara & Maxime</h1>
-      <div class="knot-divider"></div>
+      <div class="lorien-divider" aria-hidden="true"></div>
       <p class="subtitle">24 juillet 2025 — Manoir de la Noë Verte, Lanloup</p>
       <div id="countdown" aria-label="Compte à rebours"></div>
       <a href="#rsvp" class="btn btn-accent">Je confirme ma présence</a>
@@ -40,10 +44,10 @@
   <!-- === DEBUT : Section PROGRAMME === -->
   <section id="programme" class="section">
     <div class="container">
-      <h2>Programme</h2>
+      <h2><span class="elf">Programme</span></h2>
       <ul class="timeline">
         <li><time>16:00</time><div><h3>Cérémonie</h3><p>Manoir de la Noë Verte</p></div></li>
-        <li><time>19:00</time><div><h3>Dîner & Soirée</h3><p>Salle de réception du Manoir</p></div></li>
+        <li><time>19:00</time><div><h3>Cocktail, dîner & soirée</h3><p>Jardins & salle de réception</p></div></li>
         <li><time>11:00 (J+1)</time><div><h3>Brunch</h3><p>Jardin du Manoir</p></div></li>
       </ul>
     </div>
@@ -53,12 +57,12 @@
   <!-- === DEBUT : Section LIEUX & HÉBERGEMENTS === -->
   <section id="lieux" class="section alt">
     <div class="container">
-      <h2>Lieux & Hébergements</h2>
+      <h2><span class="elf">Lieux & Hébergements</span></h2>
 
       <!-- Carte du lieu principal -->
       <div class="card" style="margin-bottom:16px;">
         <h3>Lieu principal</h3>
-        <p>Manoir de la Noë Verte, 22290 Lanloup</p>
+        <p class="dropcap">Manoir de la Noë Verte, 22290 Lanloup</p>
         <div class="map-embed">
           <iframe
             title="Manoir de la Noë Verte — Carte"
@@ -67,17 +71,16 @@
           </iframe>
         </div>
         <a class="btn" target="_blank" rel="noopener"
-          href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">
+           href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">
           Ouvrir dans Google Maps
         </a>
       </div>
 
       <h3>Hébergements recommandés à proximité</h3>
-
       <div class="cards lodging-grid">
         <!-- Camping -->
         <article class="card lodging">
-          <img src="images/hebergements/neptune.jpg" alt="Camping Sites & Paysages Le Neptune" class="lodging-photo">
+          <img src="images/neptune.jpg" alt="Camping Sites & Paysages Le Neptune" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Camping Sites & Paysages Le Neptune ★★★★</h4>
             <p class="lodging-meta">Kerguistin, 22580 Lanloup (~5 min à pied)</p>
@@ -91,7 +94,7 @@
 
         <!-- Gîte 20 pers -->
         <article class="card lodging">
-          <img src="images/hebergements/plouha-20.jpg" alt="Maison de maître 20 personnes à Plouha" class="lodging-photo">
+          <img src="images/plouha-20.jpg" alt="Maison de maître 20 personnes à Plouha" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Maison de maître — 20 personnes</h4>
             <p class="lodging-meta">Rue du Bois du Chat, 22580 Plouha (~6 min en voiture)</p>
@@ -105,11 +108,11 @@
 
         <!-- Les Gîtes de Kerégal -->
         <article class="card lodging">
-          <img src="images/hebergements/keregal.jpg" alt="Les Gîtes de Kerégal à Plouha" class="lodging-photo">
+          <img src="images/keregal.jpg" alt="Les Gîtes de Kerégal à Plouha" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Les Gîtes de Kerégal — jusqu’à 16 pers.</h4>
             <p class="lodging-meta">41 Keregal, 22580 Plouha (~8 min en voiture)</p>
-            <p class="lodging-note">Charmante propriété bretonne idéale pour les familles.</p>
+            <p class="lodging-note">Plusieurs gîtes de charme sur une même propriété.</p>
             <div class="chips"><span class="chip">Gîtes</span></div>
             <div class="lodging-actions">
               <a class="btn" target="_blank" rel="noopener" href="https://www.grandsgites.com/gite-22-keregal-7011.htm">Voir / Itinéraire</a>
@@ -119,11 +122,11 @@
 
         <!-- Hébergement de groupe -->
         <article class="card lodging">
-          <img src="images/hebergements/plouharmor.jpg" alt="Plouharmor - Le Pavillon (hébergement de groupe)" class="lodging-photo">
+          <img src="images/plouharmor.jpg" alt="Plouharmor - Le Pavillon (hébergement de groupe)" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Plouharmor — Le Pavillon (10 à 117 pers.)</h4>
             <p class="lodging-meta">Plouha (~10 min en voiture)</p>
-            <p class="lodging-note">Hébergement de groupe modulable, proche de la mer et du GR34.</p>
+            <p class="lodging-note">Hébergement de groupe modulable, proche mer & GR34.</p>
             <div class="chips"><span class="chip">Gîte de groupe</span></div>
             <div class="lodging-actions">
               <a class="btn" target="_blank" rel="noopener" href="https://www.gitedegroupe.fr/gite-groupe-As-3a47.html">Voir / Itinéraire</a>
@@ -133,11 +136,11 @@
 
         <!-- Ferme de Kerloury -->
         <article class="card lodging">
-          <img src="images/hebergements/kerloury.jpg" alt="Ferme de Kerloury - Paimpol" class="lodging-photo">
+          <img src="images/kerloury.jpg" alt="Ferme de Kerloury - Paimpol" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Ferme de Kerloury — 14 pers.</h4>
             <p class="lodging-meta">Paimpol (~15 min en voiture)</p>
-            <p class="lodging-note">6 chambres, 13 lits — parfait pour familles ou groupes.</p>
+            <p class="lodging-note">6 chambres, 13 lits — parfait pour familles.</p>
             <div class="chips"><span class="chip">Gîte</span></div>
             <div class="lodging-actions">
               <a class="btn" target="_blank" rel="noopener" href="https://www.clevacances.com/fr/hebergement/39951-point">Voir / Itinéraire</a>
@@ -147,7 +150,7 @@
 
         <!-- Manoir de Kerhir -->
         <article class="card lodging">
-          <img src="images/hebergements/kerhir.jpg" alt="Manoir de Kerhir - Trédarzec" class="lodging-photo">
+          <img src="images/kerhir.jpg" alt="Manoir de Kerhir - Trédarzec" class="lodging-photo">
           <div class="lodging-body">
             <h4 class="lodging-title">Manoir de Kerhir — 15 pers.</h4>
             <p class="lodging-meta">Trédarzec (~25 min en voiture)</p>
@@ -170,85 +173,72 @@
   <!-- === DEBUT : Section RSVP === -->
   <section id="rsvp" class="section alt">
     <div class="container">
-      <h2>Confirmez votre présence</h2>
+      <h2><span class="elf">RSVP</span></h2>
       <p>Merci de remplir le formulaire ci-dessous pour nous confirmer votre présence 💌</p>
 
       <!-- ✳️✳️✳️ COPIE ICI LE CODE FOURNI PAR GOOGLE FORMS ✳️✳️✳️ -->
-      <strong><!-- Exemple de structure à remplacer par ton iframe Google Forms -->
-     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw20qC-S2d80VWqTMtNAb4rGLd0F_GGNHUWDqjGqPM_rxRSA/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <strong>
+        <!-- Remplace ENTIEREMENT la balise iframe suivante par celle fournie par Google Forms -->
+        <iframe src="COLLE_ICI_L_URL_IFRAME_DE_TON_GOOGLE_FORM"
+          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
       </strong>
       <!-- ✳️✳️✳️ FIN DU BLOC GOOGLE FORMS ✳️✳️✳️ -->
     </div>
   </section>
   <!-- === FIN : Section RSVP === -->
 
+  <!-- === DEBUT : Section FAQ / Infos pratiques === -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2><span class="elf">FAQ & Infos pratiques</span></h2>
+      <p class="hint">Quelques informations utiles pour profiter sereinement de ce week-end 🌿</p>
+
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Accès & stationnement</summary>
+          <div class="faq-content">
+            <p><strong>Adresse :</strong> Manoir de la Noë Verte, 22290 Lanloup</p>
+            <p>Grand parking sur place, à proximité immédiate du manoir.</p>
+            <p>Un <strong>binôme de chauffeurs</strong> assurera le retour des voitures et des invités ayant bu — <strong>gratuit</strong>, système de <strong>roulement</strong> 🍸🚗</p>
+            <p><a class="btn" target="_blank" rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">Itinéraire Google Maps</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Animaux</summary>
+          <div class="faq-content">
+            <p><strong>Pas d’animaux</strong> sur le site du mariage. Merci de prévoir une garde 🐾.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Enfants</summary>
+          <div class="faq-content">
+            <p>Soirée <strong>adulte uniquement</strong> — il n’est pas possible de faire garder les enfants sur place.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Retour & sécurité</summary>
+          <div class="faq-content">
+            <p>Le service de chauffeurs bénévoles vous ramènera, ainsi que votre voiture, en toute sécurité (roulement prévu).</p>
+            <p>Merci de privilégier cette solution plutôt que de reprendre le volant 🚫.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Plage & baignade</summary>
+          <div class="faq-content">
+            <p>La plage (ex. <strong>Plage du Palus</strong>) est à ~10 minutes — baignade possible 🌊. Prévoyez maillots & serviettes.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- === FIN : Section FAQ / Infos pratiques === -->
+
+  <!-- Scripts -->
   <script src="script.js?v=6"></script>
 </body>
 </html>
-
-
-<!-- === DEBUT : Section FAQ / Infos pratiques === -->
-<section id="faq" class="section">
-  <div class="container">
-    <h2>FAQ & Infos pratiques</h2>
-    <p class="hint">Quelques informations utiles pour profiter sereinement de ce week-end 🌿</p>
-
-    <div class="faq">
-      <details class="faq-item" open>
-        <summary>Accès & stationnement</summary>
-        <div class="faq-content">
-          <p><strong>Adresse :</strong> Manoir de la Noë Verte, 22290 Lanloup</p>
-          <p>Un grand parking est disponible sur place, à proximité immédiate du manoir.</p>
-          <p>Si vous laissez votre voiture sur place, un binôme de chauffeurs assurera le retour des véhicules et des invités le soir, gratuitement.  
-          Le système fonctionne par roulement afin que chacun puisse profiter sans se soucier du retour 🍸🚗</p>
-          <p><a class="btn" target="_blank" rel="noopener"
-              href="https://www.google.com/maps/search/?api=1&query=Manoir%20de%20la%20No%C3%AB%20Verte%2C%20Lanloup">Itinéraire Google Maps</a></p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Animaux</summary>
-        <div class="faq-content">
-          <p>Les animaux ne seront malheureusement pas autorisés sur le site du mariage 🐾.</p>
-          <p>Merci de prévoir une garde pour vos compagnons à quatre pattes avant votre venue.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Enfants</summary>
-        <div class="faq-content">
-          <p>Nous aimons beaucoup vos enfants 💛, mais nous avons choisi de faire de cette journée une soirée “adulte uniquement”.</p>
-          <p>Il ne sera pas possible de faire garder les enfants sur place.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Retour & sécurité</summary>
-        <div class="faq-content">
-          <p>Un <strong>service de chauffeurs bénévoles</strong> sera disponible gratuitement pour ramener les voitures et les invités ayant consommé de l’alcool.</p>
-          <p>Le fonctionnement se fait par roulement : les conducteurs désignés en première partie de soirée seront ensuite relayés pour que tout le monde puisse participer à la fête 🕺.</p>
-          <p>Merci de privilégier cette solution plutôt que de reprendre le volant 🚫.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Plage & baignade</summary>
-        <div class="faq-content">
-          <p>La <strong>plage du Palus</strong> se trouve à environ 10 minutes du manoir 🌊.</p>
-          <p>Il sera possible de s’y baigner ou de profiter d’une balade le lendemain du mariage.</p>
-          <p>Pensez à apporter vos maillots, serviettes et sandales !</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Tenue</summary>
-        <div class="faq-content">
-          <p>Tenue chic et confortable, avec une <strong>touche celtique</strong> ou un rappel de vert, bleu ou blanc si vous le souhaitez 🍀.</p>
-          <p>Le terrain est en partie naturel : talons aiguilles déconseillés. Une veste légère peut être utile pour la soirée.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-<!-- === FIN : Section FAQ / Infos pratiques === -->
-
