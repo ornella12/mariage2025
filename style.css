@@ -450,3 +450,53 @@ html, body { overflow-x: hidden; } /* évite toute barre horizontale */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
 }
+
+/* === NAVIGATION élégante & responsive === */
+.navbar {
+  background: #fffefb;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Marque --- */
+.brand {
+  font-family: "Uncial Antiqua", serif;
+  font-size: 1.4rem;
+  color: var(--green-1);
+  text-decoration: none;
+  font-weight: 600;
+}
+.brand-mark {
+  background: var(--green-1);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+/* --- Liens --- */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--green-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+.nav-links a:hover { color: var(--green-2); }
+
+/* --- Burger invisible par défaut --- */
+.nav-toggle { d
