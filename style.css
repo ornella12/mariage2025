@@ -155,20 +155,43 @@ header.nav .container{
 }
 
 
-/* — Séparateur Feuille de Lórien — */
-.lorien-divider{
-  width:100%;height:28px;margin:18px auto 8px;opacity:.95;
-  background:url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' width='320' height='28' viewBox='0 0 320 28'>\
-<defs><style>\
-.leaf{fill:%23C8E3D4;stroke:%232E7D6E;stroke-width:1.2}\
-.vine{fill:none;stroke:%23D1B27C;stroke-width:1.5;stroke-linecap:round}\
-</style></defs>\
-<path class='vine' d='M5 14 C 45 2, 85 26, 125 14 S 205 2, 245 14 S 285 26, 315 14'/>\
-<path class='leaf' d='M152 6c6 3 6 13 0 16c-6-3-6-13 0-16z'/>\
-<path class='leaf' d='M168 6c6 3 6 13 0 16c-6-3-6-13 0-16z'/>\
-</svg>") center/auto 24px repeat-x;
+/* --- Séparateur floral “feuilles de Lórien” --- */
+.floral-divider{
+  width:100%;
+  height:28px;          /* ajuste la hauteur si besoin (24–36px) */
+  margin:18px auto 8px;
+  opacity:.98;
+  /* petit motif SVG répété horizontalement */
+  background:
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='120' height='28' viewBox='0 0 120 28'>\
+  <defs>\
+    <style>\
+      .vine{fill:none;stroke:%23D1B27C;stroke-width:1.6;stroke-linecap:round}\
+      .leaf{fill:%23C8E3D4;stroke:%232E7D6E;stroke-width:1.1}\
+      .bud{fill:%232E7D6E}\
+    </style>\
+    <!-- Feuille Lórien stylisée (symétrique) -->\
+    <g id='lorien'>\
+      <path class='leaf' d='M0 0c6 -6 14 -6 20 0c-6 6 -14 6 -20 0z'/>\
+      <path class='leaf' d='M0 0c-6 6 -14 6 -20 0c6 -6 14 -6 20 0z' transform='translate(0,0) scale(1,-1)'/>\
+      <circle class='bud' cx='0' cy='0' r='1.6'/>\
+    </g>\
+  </defs>\
+  <!-- liane dorée en vague douce -->\
+  <path class='vine' d='M0 14 C 15 6, 30 22, 45 14 S 75 6, 90 14 S 105 22, 120 14'/>\
+  <!-- feuilles réparties sur la tuile -->\
+  <g transform='translate(15,14)'><use href='%23lorien'/></g>\
+  <g transform='translate(60,14)'><use href='%23lorien'/></g>\
+  <g transform='translate(105,14)'><use href='%23lorien'/></g>\
+</svg>") center/120px 28px repeat-x;
 }
+
+/* variante plus “riche” (motif rapproché) — utilise .floral-divider.dense si tu veux plus de fleurs */
+.floral-divider.dense{
+  background-size: 90px 28px;   /* rapproche les motifs */
+}
+
 
 /* — Boutons — */
 .btn{
