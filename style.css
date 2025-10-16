@@ -282,6 +282,14 @@ header.nav .container{
   margin: 0 auto;              /* ✅ centre horizontalement le tout */
 }
 
+.programme-photo img {
+  width: 100%;
+  max-width: 500px;            /* ✅ évite qu’elle prenne trop de place */
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
 .programme-text h2 {
   margin-bottom: 24px;
 }
