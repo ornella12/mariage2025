@@ -59,29 +59,83 @@ p{margin:0 0 1em;}
 }
 
 /* — Navigation — */
-.nav{
-  position:sticky;top:0;z-index:20;
-  background:rgba(255,255,255,.9);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(0,0,0,.06);
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
 }
-header.nav .container{
-  display:flex;align-items:center;justify-content:space-between;
+
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1100px;
+  margin:auto;
+  padding:10px 20px;
 }
+
+/* logo */
+.brand{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--green-1);
+}
+
 .brand-mark{
-  display:inline-grid;place-items:center;
-  width:36px;height:36px;
+  display:inline-grid;
+  place-items:center;
+  width:36px;
+  height:36px;
   border-radius:999px;
-  background:var(--green-2);color:#fff;font-weight:700;
+  background:var(--green-2);
+  color:#fff;
+  font-weight:700;
+  margin-right:6px;
 }
-.topmenu{display:flex;gap:16px;flex-wrap:wrap;}
-.topmenu a{text-decoration:none;color:var(--green-1);font-weight:600;}
-.topmenu a:hover{color:var(--green-2);}
+
+/* menu */
+.nav-links{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+/* liens */
+.nav-links a{
+  text-decoration:none;
+  color:white; /* correction accessibilité */
+  font-weight:600;
+}
+
+/* hover */
+.nav-links a:hover{
+  color:#f0f0f0;
+}
+
+/* bouton RSVP */
+.btn-primary{
+  background:var(--green-2);
+  color:white;
+  padding:8px 14px;
+  border-radius:20px;
+}
+
+/* mobile */
 @media (max-width:680px){
-  .topmenu{gap:10px;}
-  .topmenu a{padding:6px 8px;font-size:.95rem;}
-  header.nav .container{row-gap:8px;}
+
+  .nav-links{
+    gap:12px;
+  }
+
+  .nav-links a{
+    font-size:.95rem;
+  }
+
 }
+
 
 /* — Hero (photo de couverture sans filtre) — */
 .hero{
