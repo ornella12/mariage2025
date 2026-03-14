@@ -1,6 +1,6 @@
-/* === CSS COMPLET — CORRIGÉ === */
+/* === Thème Celtique / Elfique — Mariage Clara & Maxime === */
 
-/* Palette & variables */
+/* — Palette & variables — */
 :root{
   --green-1:#2E7D6E;     
   --green-2:#3C9A82;     
@@ -13,7 +13,7 @@
   --shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* Reset & bases */
+/* — Reset & bases — */
 html,body{margin:0;padding:0;scroll-behavior:smooth;}
 body{
   background:var(--beige);
@@ -23,24 +23,32 @@ body{
   font-size:16px;
 }
 
-/* Sections */
+/* — Sections — */
 .section{padding:64px 0;}
 .section.alt{background:var(--mint);}
 .container{width:min(1080px,92%);margin:0 auto;}
 
-/* Titres */
+/* — Titres et typographies — */
 h1,h2,h3,h4{
   font-family:"Cormorant Garamond", Georgia, serif;
   color:var(--green-1);
   letter-spacing:.3px;
   margin:0 0 .6em;
 }
-h1{font-family:"Uncial Antiqua","Cormorant Garamond",serif;font-weight:400;letter-spacing:.5px;}
-h2 .elf{font-family:"Uncial Antiqua",serif;font-weight:400;letter-spacing:.6px;}
+h1{
+  font-family:"Uncial Antiqua","Cormorant Garamond",serif;
+  font-weight:400;
+  letter-spacing:.5px;
+}
+h2 .elf{
+  font-family:"Uncial Antiqua",serif;
+  font-weight:400;
+  letter-spacing:.6px;
+}
 h3{font-size:1.2rem;margin-top:1em;color:var(--green-2);}
 p{margin:0 0 1em;}
 
-/* Lettrine */
+/* — Lettrine / effet manuscrit — */
 .dropcap::first-letter{
   font-family:"Uncial Antiqua",serif;
   font-size:2.6rem;
@@ -50,18 +58,24 @@ p{margin:0 0 1em;}
   color:var(--green-1);
 }
 
-/* === HEADER / NAVIGATION === */
+/* — Navigation sticky & clean — */
 .navbar {
-  position: sticky;  /* Sticky */
-  top:0;
-  z-index:1000;
-  background:#fffefb;
-  border-bottom:1px solid rgba(0,0,0,.05);
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  display:flex;
-  align-items:center;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fffefb;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+/* Masquer les checkboxes vides */
+.nav-container input[type="checkbox"], 
+.navbar input {
+  display: none !important;
+}
+
+/* Nav container */
 .nav-container{
   display:flex;
   align-items:center;
@@ -76,8 +90,8 @@ p{margin:0 0 1em;}
   text-decoration:none;
   font-weight:600;
   color:var(--green-1);
-  font-family:"Uncial Antiqua", serif;
-  font-size:1.4rem;
+  font-family: "Uncial Antiqua", serif;
+  font-size: 1.4rem;
 }
 .brand-mark{
   display:inline-grid;
@@ -91,13 +105,14 @@ p{margin:0 0 1em;}
   margin-right:6px;
 }
 
-/* navigation links */
+/* menu */
 .nav-links{
   display:flex;
   gap:20px;
   align-items:center;
 }
 
+/* liens */
 .nav-links a{
   text-decoration:none;
   color:var(--green-1);
@@ -106,28 +121,35 @@ p{margin:0 0 1em;}
   padding:6px 12px;
   border-radius:12px;
 }
-.nav-links a:hover, .nav-links a.active{
+.nav-links a:hover{
+  background:var(--green-2);
+  color:white;
+}
+
+/* section active */
+.nav-links a.active{
   background:var(--green-2);
   color:white;
 }
 
 /* bouton RSVP normalisé */
 .nav-links .btn-primary{
-  background:var(--green-1); /* même couleur que les autres liens */
+  background:var(--green-1);
   color:white;
   border-radius:12px;
   padding:6px 12px;
   font-weight:500;
   text-decoration:none;
   border:none;
-  transition:all .2s ease;
 }
+
+/* bouton hover RSVP */
 .nav-links .btn-primary:hover{
   background:var(--green-2);
   color:white;
 }
 
-/* bouton général */
+/* bouton normal */
 .btn{
   display:inline-block;
   padding:10px 16px;
@@ -137,45 +159,176 @@ p{margin:0 0 1em;}
   color:#fff;
   background:var(--green-1);
   transition:transform .08s ease,opacity .2s;
+  outline: none;       /* retirer le surlignage par défaut */
+  box-shadow: none;    /* retirer le surlignage par défaut */
 }
 .btn:hover{transform:translateY(-1px);opacity:.95;}
 
-/* pas de carré / checkbox */
-input[type=checkbox],
-details summary {
-  display:none; /* supprime le carré */
-}
+/* btn accent doré */
+.btn-accent{background:var(--gold);border-color:var(--gold);color:#2e2e2e;}
 
-/* responsive */
+/* mobile */
 @media (max-width:680px){
-  .nav-links{gap:12px;}
-  .nav-links a{font-size:.95rem;}
+  .nav-links{
+    gap:12px;
+  }
+  .nav-links a{
+    font-size:.95rem;
+  }
 }
 
-/* Hero */
+/* — Hero — */
 .hero{
   position:relative;
   min-height:64vh;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  color:#fff;
+  display:grid;place-items:center;
+  text-align:center;color:#fff;
   background:url('images/hero.jpg') center/cover no-repeat;
 }
 .hero-inner{padding:64px 16px;text-shadow:0 2px 16px rgba(0,0,0,.35);}
 .subtitle{opacity:.97;margin-bottom:16px;}
-.hero-split { background: var(--beige); color: var(--ink); display:flex; justify-content:center; align-items:center; min-height:85vh; padding:0;}
-.hero-grid{display:grid; grid-template-columns:1fr 1fr; width:min(1100px,92%); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); background:var(--beige);}
-.hero-photo{background:url('images/hero.jpg') center/cover no-repeat; min-height:85vh;}
-.hero-text{display:flex; flex-direction:column; justify-content:center; padding:64px; text-align:left;}
-.hero-text h1{font-family:"Uncial Antiqua",serif; font-size:3rem; color:var(--green-1); white-space:nowrap;}
-.hero-text .subtitle{font-family:"Cormorant Garamond", serif; font-size:1.3rem; color:var(--muted); margin:20px 0 32px;}
-.hero-text .btn{align-self:flex-start;}
 
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
-  .hero-photo{min-height:60vh;}
-  .hero-text{padding:40px 20px; text-align:center;}
-  .hero-text .btn{align-self:center;}
-  .hero-text h1{font-size:2.2rem; letter-spacing:.03em;}
+.hero-split {
+  background: var(--beige);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 0;
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(1100px, 92%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--beige);
+}
+
+/* photo */
+.hero-photo {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  min-height: 85vh;
+}
+
+/* texte */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-family: "Uncial Antiqua", serif;
+  font-size: 3rem;
+  color: var(--green-1);
+  white-space: nowrap;
+}
+
+.hero-text .subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  color: var(--muted);
+  margin: 20px 0 32px;
+}
+
+.hero-text .btn {
+  align-self: flex-start;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    min-height: 60vh;
+  }
+
+  .hero-text {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-text .btn {
+    align-self: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* --- Séparateur floral --- */
+.floral-divider{
+  width:100%;
+  height:28px;
+  margin:18px auto 8px;
+  opacity:.98;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='28' viewBox='0 0 120 28'><defs><style>.vine{fill:none;stroke:%23D1B27C;stroke-width:1.6;stroke-linecap:round}.leaf{fill:%23C8E3D4;stroke:%232E7D6E;stroke-width:1.1}.bud{fill:%232E7D6E}</style><g id='lorien'><path class='leaf' d='M0 0c6 -6 14 -6 20 0c-6 6 -14 6 -20 0z'/><path class='leaf' d='M0 0c-6 6 -14 6 -20 0c6 -6 14 -6 20 0z' transform='translate(0,0) scale(1,-1)'/><circle class='bud' cx='0' cy='0' r='1.6'/></g></defs><path class='vine' d='M0 14 C 15 6, 30 22, 45 14 S 75 6, 90 14 S 105 22, 120 14'/><g transform='translate(15,14)'><use href='%23lorien'/></g><g transform='translate(60,14)'><use href='%23lorien'/></g><g transform='translate(105,14)'><use href='%23lorien'/></g></svg>") center/120px 28px repeat-x;
+}
+
+.floral-divider.dense{
+  background-size: 90px 28px;
+}
+
+/* Timeline & Programme */
+.timeline{list-style:none;padding:0;margin:0;border-left: 3px solid var(--green-1);}
+.timeline li{
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 24px;
+  background:#fff;
+  border-radius:0 8px 8px 0;
+  box-shadow:var(--shadow);
+}
+.timeline time{font-family: "Cormorant Garamond", serif;font-weight:600;color:var(--green-1);display:block;margin-bottom:4px;}
+.timeline h3{margin:0;font-family:"Cormorant Garamond", serif;font-weight:500;color:var(--ink);}
+.timeline p{margin:4px 0 0;color:var(--muted);}
+
+.programme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.programme-photo img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+.programme-text h2 {margin-bottom:24px;}
+@media (max-width: 800px) {
+  .programme-grid {grid-template-columns: 1fr;}
+  .programme-photo {margin-top:24px;}
+}
+
+/* NAV responsive (hamburger supprimé) */
+header.nav .container{ display:flex; align-items:center; justify-content:space-between; position:relative; }
+
+/* Patch HERO mobile */
+html, body { overflow-x: hidden; }
+.hero-split { min-height: 85vh; }
+.hero-grid { width: min(100%, 92%); }
+.hero-photo { min-height: 70vh; }
+.hero-text {
+  padding: 40px max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left));
+  text-align: center;
+}
+.hero-text h1 { white-space: nowrap; font-size: clamp(1.8rem, 8.2vw, 3rem); line-height:1.12; letter-spacing:0.02em; }
+.hero-text .subtitle { font-size: clamp(1rem,4.5vw,1.3rem); line-height:1.45; margin:16px 0 28px; overflow-wrap:anywhere; }
+.hero-text .btn { align-self: center; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
